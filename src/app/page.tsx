@@ -1,113 +1,231 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import kidsImg from "@/assets/imgs/kids.webp";
+import kidsRunningImg from "@/assets/imgs/kids-running.webp";
+import kidsLearning from "@/assets/imgs/kids-learning.webp";
+import education from "@/assets/education.svg";
+import assistance from "@/assets/assistance.svg";
+import justice from "@/assets/justice.svg";
+import { ViolenceTypes } from "@/components/violence-types";
+import { Summary } from "@/components/ui/summary";
+import { LegislationItem } from "@/components/legislation-item";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+    <main>
+      <section className="bg-white py-2 text-center">
+        <p className="text-foreground/75">
+          Este site é uma demonstração de um projeto dos Alunos de Direito da{" "}
+          <strong>Universidade Vila Velha</strong>. Desconsidere as informações
+          aqui contidas.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      </section>
+      <section className="py-6">
+        <div className="container flex items-center gap-16">
+          <div className="space-y-8">
+            <h1 className="text-6xl font-semibold">
+              Proteção e Defesa dos Direitos das Crianças
+            </h1>
+            <p className="text-lg">
+              Juntos, podemos acabar com todas as formas de violência contra
+              crianças e garantir um futuro mais seguro e justo para elas.
+            </p>
+            <div className="flex gap-2">
+              <Button>Denunciar Violência</Button>
+              <Button variant="outline">Saiba mais</Button>
+            </div>
+          </div>
+          <div>
+            <Image className="max-w-sm rounded-sm" src={kidsImg} alt="" />
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="py-6">
+        <div className="container flex items-center gap-16">
+          <Image className="max-w-60 rounded-sm" src={kidsRunningImg} alt="" />
+          <div className="space-y-8">
+            <h2 className="text-5xl font-semibold">
+              Definindo os Tipos de Violência
+            </h2>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
+            <div className="flex flex-wrap gap-6">
+              <ViolenceTypes
+                number={1}
+                title="Abuso"
+                description="Maus-tratos físicos, emocionais, negligência e exploração sexual."
+              />
+
+              <ViolenceTypes
+                number={2}
+                title="Exploração"
+                description="Trabalho infantil, mendicância, pornografia e tráfico."
+              />
+
+              <ViolenceTypes
+                number={3}
+                className="flex-auto"
+                title="Tráfico"
+                description="Aliciamento, transporte e transferência de crianças para fins de exploração."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-foreground py-20">
+        <div className="container space-y-16 text-white">
+          <h2 className="text-5xl font-semibold">
+            Fatores de Risco e Vulnerabilidade
           </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className="flex flex-wrap gap-5">
+            <div className="flex-1 space-y-2">
+              <h3 className="text-xl font-bold">Pobreza</h3>
+              <p className="text-lg">
+                Famílias em situação de vulnerabilidade econômica estão mais
+                expostas à violência.
+              </p>
+            </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            <div className="flex-1 space-y-2">
+              <h3 className="text-xl font-bold">Violência Doméstica</h3>
+              <p className="text-lg">
+                Crianças que vivenciam violência em casa têm maior risco de
+                serem vítimas.
+              </p>
+            </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <div className="flex-1 space-y-2">
+              <h3 className="text-xl font-bold">Discriminação</h3>
+              <p className="text-lg">
+                Crianças marginalizadas por motivos de raça, etnia, gênero ou
+                deficiência sofrem mais violência.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container space-y-16">
+          <h2 className="text-5xl font-semibold">Impactos da Violência</h2>
+
+          <Summary trigger="Efeitos devastadores na saúde física e mental">
+            <p>
+              A violência pode causar traumas, problemas de comportamento, baixo
+              rendimento escolar e dificuldades de relacionamento.
+            </p>
+          </Summary>
+        </div>
+      </section>
+
+      <section className="pb-6 pt-1">
+        <div className="container flex items-center gap-16">
+          <Image className="max-w-sm rounded-sm" src={kidsLearning} alt="" />
+
+          <div className="space-y-8">
+            <h2 className="text-5xl font-semibold">Legislação de Proteção</h2>
+
+            <div className="flex flex-wrap gap-6">
+              <LegislationItem
+                title="Estatuto da Criança e do Adolescente"
+                description="Lei que garante os direitos fundamentais e a proteção integral de crianças e adolescentes."
+              />
+
+              <LegislationItem
+                title="Convenção sobre os Direitos da Criança"
+                description="Tratado internacional que estabelece princípios universais de proteção à infância."
+              />
+
+              <LegislationItem
+                className="flex-auto"
+                title="Plano Nacional de Enfrentamento"
+                description="Política pública para coordenar ações de prevenção e atendimento às vítimas."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-protest bg-center bg-no-repeat py-20">
+        <div className="container space-y-16">
+          <h2 className="text-5xl font-semibold">Papel da Sociedade Civil</h2>
+
+          <div className="flex flex-wrap gap-5 text-foreground/75">
+            <div className="flex-1 space-y-2">
+              <div className="flex h-14 items-center justify-center rounded-lg bg-[#e5dfd2]">
+                <p className="text-2xl font-bold">1</p>
+              </div>
+              <h3 className="text-xl font-bold">Conscientização</h3>
+              <p className="text-lg">
+                Campanhas e ações de sensibilização sobre o tema.
+              </p>
+            </div>
+
+            <div className="flex-1 space-y-2">
+              <div className="flex h-14 items-center justify-center rounded-lg bg-[#e5dfd2]">
+                <p className="text-2xl font-bold">2</p>
+              </div>
+              <h3 className="text-xl font-bold">Denúncia</h3>
+              <p className="text-lg">
+                Denunciar casos de violência às autoridades competentes.
+              </p>
+            </div>
+
+            <div className="flex-1 space-y-2">
+              <div className="flex h-14 items-center justify-center rounded-lg bg-[#e5dfd2]">
+                <p className="text-2xl font-bold">3</p>
+              </div>
+              <h3 className="text-xl font-bold">Mobilização</h3>
+              <p className="text-lg">
+                Pressionar o poder público por políticas efetivas de proteção.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-foreground/85 py-28">
+        <div className="container space-y-16">
+          <div className="rounded-sm bg-[#EFECE6] px-16 py-12">
+            <h2 className="mb-9 text-5xl font-semibold">
+              Ações de Prevenção e Atendimento
+            </h2>
+
+            <div className="flex flex-wrap gap-5 text-foreground/75">
+              <div className="flex-1 space-y-2">
+                <Image className="size-11" src={education} alt="" />
+                <h3 className="text-xl font-bold">Educação</h3>
+                <p className="text-lg">
+                  Programas de formação em direitos humanos e cidadania.
+                </p>
+              </div>
+
+              <div className="flex-1 space-y-2">
+                <Image className="size-11" src={assistance} alt="" />
+                <h3 className="text-xl font-bold">Assistência Social</h3>
+                <p className="text-lg">
+                  Serviços de acolhimento, apoio psicossocial e reinserção
+                  familiar.
+                </p>
+              </div>
+
+              <div className="flex-1 space-y-2">
+                <Image className="size-11" src={justice} alt="" />
+                <h3 className="text-xl font-bold">Justiça</h3>
+                <p className="text-lg">
+                  Ações judiciais e responsabilização dos agressores.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container space-y-16">
+          <div></div>
+        </div>
+      </section>
     </main>
   );
 }
