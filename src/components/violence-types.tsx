@@ -9,7 +9,7 @@ type ViolenceTypesProps = {
 
 export function ViolenceTypes({ number, title, description, className} : ViolenceTypesProps ) {
   return (
-    <div className={cn("flex flex-1 gap-4", className)}>
+    <div className={cn("flex gap-4", className)}>
       <div className="flex size-10 shrink-0 items-center justify-center rounded-sm bg-[#e5dfd2]">
         <p className="text-2xl font-bold">{number}</p>
       </div>
