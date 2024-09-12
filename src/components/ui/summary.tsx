@@ -12,14 +12,14 @@ export function Summary({ trigger, children }: SummaryProps) {
 
     return (
         <div className="text-foreground/80">
-            <button className="flex items-center gap-3 group" 
+            <button className="flex items-center lg:gap-3 gap-1 group" 
                     onClick={() => setOpen(!open)}
                     data-state={open ? 'open' : 'closed'}
             >
                 <TriangleRightIcon 
                     className="size-7 text-foreground/75 transition-transform duration-200 ease-linear group-data-[state=open]:rotate-90"
                 />
-                <span className="text-lg">{trigger}</span>
+                <span className="lg:text-lg">{trigger}</span>
             </button>
 
             <div className="pl-3 overflow-hidden transition-all duration-200 ease-linear grid-rows-[0fr] grid data-[state=open]:grid-rows-[1fr] group" 

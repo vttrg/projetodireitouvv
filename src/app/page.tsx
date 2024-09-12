@@ -24,7 +24,7 @@ export default function Home() {
         </p>
       </section>
       <section className="py-6">
-        <div className="container flex items-center gap-16">
+        <div className="container flex flex-col items-center gap-16 lg:flex-row">
           <SlideUp>
             <div className="space-y-8">
               <h1 className="text-6xl font-semibold">
@@ -49,7 +49,7 @@ export default function Home() {
       </section>
 
       <section className="py-6">
-        <div className="container flex items-center gap-16">
+        <div className="container flex flex-col-reverse items-center gap-16 lg:flex-row">
           <ScaleIn delay={300}>
             <Image
               className="max-w-60 rounded-sm"
@@ -59,11 +59,11 @@ export default function Home() {
           </ScaleIn>
           <SlideUp>
             <div className="space-y-8">
-              <h2 className="text-5xl font-semibold">
+              <h2 className="text-4xl font-semibold lg:text-5xl">
                 Definindo os Tipos de Violência
               </h2>
 
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-col flex-wrap gap-6 lg:flex-row">
                 <SlideUp delay={400} className="flex-1">
                   <ViolenceTypes
                     number={1}
@@ -97,11 +97,11 @@ export default function Home() {
       <section className="bg-foreground py-20">
         <SlideUp>
           <div className="container space-y-16 text-white">
-            <h2 className="text-5xl font-semibold">
+            <h2 className="text-4xl font-semibold lg:text-5xl">
               Fatores de Risco e Vulnerabilidade
             </h2>
 
-            <div className="flex flex-wrap gap-5">
+            <div className="flex flex-col flex-wrap gap-5 lg:flex-row">
               <SlideUp delay={400} className="flex-1">
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">Pobreza</h3>
@@ -136,10 +136,12 @@ export default function Home() {
         </SlideUp>
       </section>
 
-      <section className="py-20">
+      <section className="pb-4 pt-8 lg:py-20">
         <SlideUp>
-          <div className="container space-y-16">
-            <h2 className="text-5xl font-semibold">Impactos da Violência</h2>
+          <div className="container space-y-8 lg:space-y-16">
+            <h2 className="text-4xl font-semibold lg:text-5xl">
+              Impactos da Violência
+            </h2>
 
             <Summary trigger="Efeitos devastadores na saúde física e mental">
               <p>
@@ -152,16 +154,18 @@ export default function Home() {
       </section>
 
       <section className="pb-6 pt-1">
-        <div className="container flex items-center gap-16">
+        <div className="container flex flex-col-reverse items-center gap-16 lg:flex-row">
           <ScaleIn delay={300}>
             <Image className="max-w-sm rounded-sm" src={kidsLearning} alt="" />
           </ScaleIn>
 
           <SlideUp>
             <div className="space-y-8">
-              <h2 className="text-5xl font-semibold">Legislação de Proteção</h2>
+              <h2 className="text-4xl font-semibold lg:text-5xl">
+                Legislação de Proteção
+              </h2>
 
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-col flex-wrap gap-6 lg:flex-row">
                 <SlideUp className="flex-1" delay={400}>
                   <LegislationItem
                     title="Estatuto da Criança e do Adolescente"
@@ -192,12 +196,14 @@ export default function Home() {
       <section className="bg-protest bg-center bg-no-repeat py-20">
         <SlideUp>
           <div className="container space-y-16">
-            <h2 className="text-5xl font-semibold">Papel da Sociedade Civil</h2>
+            <h2 className="text-4xl font-semibold lg:text-5xl">
+              Papel da Sociedade Civil
+            </h2>
 
-            <div className="flex flex-wrap gap-5 text-foreground/75">
+            <div className="flex flex-col flex-wrap gap-5 text-foreground/75 lg:flex-row">
               <SlideUp className="flex-1" delay={400}>
                 <div className="space-y-2">
-                  <div className="flex h-14 items-center justify-center rounded-lg bg-[#e5dfd2]">
+                  <div className="mx-auto flex h-14 max-w-14 items-center justify-center rounded-lg bg-[#e5dfd2] lg:mx-0 lg:max-w-full">
                     <p className="text-2xl font-bold">1</p>
                   </div>
                   <h3 className="text-xl font-bold">Conscientização</h3>
@@ -209,7 +215,7 @@ export default function Home() {
 
               <SlideUp className="flex-1" delay={440}>
                 <div className="space-y-2">
-                  <div className="flex h-14 items-center justify-center rounded-lg bg-[#e5dfd2]">
+                  <div className="mx-auto flex h-14 max-w-14 items-center justify-center rounded-lg bg-[#e5dfd2] lg:mx-0 lg:max-w-full">
                     <p className="text-2xl font-bold">2</p>
                   </div>
                   <h3 className="text-xl font-bold">Denúncia</h3>
@@ -221,7 +227,7 @@ export default function Home() {
 
               <SlideUp className="flex-1" delay={480}>
                 <div className="space-y-2">
-                  <div className="flex h-14 items-center justify-center rounded-lg bg-[#e5dfd2]">
+                  <div className="mx-auto flex h-14 max-w-14 items-center justify-center rounded-lg bg-[#e5dfd2] lg:mx-0 lg:max-w-full">
                     <p className="text-2xl font-bold">3</p>
                   </div>
                   <h3 className="text-xl font-bold">Mobilização</h3>
@@ -238,16 +244,16 @@ export default function Home() {
 
       <section className="bg-foreground/85 py-10">
         <div className="container space-y-16">
-          <div className="rounded-sm bg-[#EFECE6] px-16 py-12">
+          <div className="rounded-sm bg-[#EFECE6] lg:px-16 px-4 py-12">
             <SlideUp>
-              <h2 className="mb-9 text-5xl font-semibold">
+              <h2 className="mb-9 lg:text-5xl text-4xl font-semibold">
                 Ações de Prevenção e Atendimento
               </h2>
 
-              <div className="flex flex-wrap gap-5 text-foreground/75">
+              <div className="flex flex-wrap gap-5 text-foreground/75 flex-col lg:flex-row">
                 <SlideUp className="flex-1" delay={400}>
                   <div className="space-y-2">
-                    <Image className="!mb-3 size-11" src={education} alt="" />
+                    <Image className="!mb-3 size-11 mx-auto lg:mx-0" src={education} alt="" />
                     <h3 className="text-xl font-bold">Educação</h3>
                     <p className="text-lg">
                       Programas de formação em direitos humanos e cidadania.
@@ -257,7 +263,7 @@ export default function Home() {
 
                 <SlideUp className="flex-1" delay={440}>
                   <div className="space-y-2">
-                    <Image className="!mb-3 size-11" src={assistance} alt="" />
+                    <Image className="!mb-3 size-11 mx-auto lg:mx-0" src={assistance} alt="" />
                     <h3 className="text-xl font-bold">Assistência Social</h3>
                     <p className="text-lg">
                       Serviços de acolhimento, apoio psicossocial e reinserção
@@ -268,7 +274,7 @@ export default function Home() {
 
                 <SlideUp className="flex-1" delay={480}>
                   <div className="space-y-2">
-                    <Image className="!mb-3 size-11" src={justice} alt="" />
+                    <Image className="!mb-3 size-11 mx-auto lg:mx-0" src={justice} alt="" />
                     <h3 className="text-xl font-bold">Justiça</h3>
                     <p className="text-lg">
                       Ações judiciais e responsabilização dos agressores.
@@ -283,9 +289,9 @@ export default function Home() {
 
       <section className="bg-foreground/85 py-16">
         <div className="container space-y-16">
-          <div className="rounded-sm bg-[#EFECE6] px-16 py-12">
+          <div className="rounded-sm bg-[#EFECE6] lg:px-16 px-4 py-12">
             <SlideUp>
-              <h2 className="mb-9 text-5xl font-semibold">
+              <h2 className="mb-9 lg:text-5xl text-4xl font-semibold">
                 Proteção e Defesa dos Direitos
               </h2>
 
@@ -295,7 +301,7 @@ export default function Home() {
                     <span className="mb-3 block text-xl font-semibold">
                       Prevenção
                     </span>
-                    <p className="text-lg">
+                    <p className="lg:text-lg">
                       Ações de educação, conscientização e fortalecimento de
                       famílias.
                     </p>
@@ -307,7 +313,7 @@ export default function Home() {
                     <span className="mb-3 block text-xl font-semibold">
                       Responsabilização
                     </span>
-                    <p className="text-lg">
+                    <p className="lg:text-lg">
                       Investigação, julgamento e punição dos agressores.
                     </p>
                   </div>
@@ -353,7 +359,7 @@ export default function Home() {
                   <span className="mb-3 block text-xl font-semibold">
                     Atendimento
                   </span>
-                  <p className="text-lg">
+                  <p className="lg:text-lg">
                     Acolhimento, apoio psicossocial e reinserção segura das
                     vítimas.
                   </p>
